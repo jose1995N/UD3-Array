@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class ejercicio12 {
@@ -6,9 +5,7 @@ public class ejercicio12 {
     
         int[][] matriz = new int[4][5];
         Scanner scanner = new Scanner(System.in);
-        Random rand = new Random();
-
-    
+      
         System.out.println("Introduce 20 números enteros:");
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
