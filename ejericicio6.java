@@ -24,10 +24,10 @@ public class ejericicio6 {
 
        
         double media = sumaNotas / numAl;
-        System.out.println("La nota media del grupo es: " + media);
+        System.out.println("La media de las notas del grupo es: " + media);
 
        
-        System.out.println("Alumnos con notas superiores a la media:");
+        System.out.println("Los alumnos con notas superiores a la media:");
         for (int i = 0; i < numAl; i++) {
             if (notas[i] > media) {
                 System.out.println("Alumno " + (i + 1) + " con nota: " + notas[i]);
