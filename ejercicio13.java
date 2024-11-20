@@ -4,50 +4,35 @@ diferentes países. El array que contiene los nombres de los países es el sigui
 filas por 10 columnas con números aleatorios generados al azar entre 140 y 210. Los decimales de la
 media se pueden despreciar. Los nombres de los países se deben mostrar utilizando el array de países
 (no se pueden escribir directamente). */
+
 import java.util.Scanner;
 public class ejercicio13 {
-    
     public static void main(String[] args) {
-        
         String[] paises = {"España", "Rusia", "Japón", "Australia"};
-        
-        
         int[][] estaturas = new int[4][10];
         Scanner scanner = new Scanner(System.in);
 
-        
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < estaturas.length; i++) {
             System.out.println("Introduce las estaturas para " + paises[i] + ":");
-            for (int j = 0; j < 10; j++) {
-                System.out.print("Persona " + (j + 1) + ": ");
+            for (int j = 0; j < estaturas[i].length; j++) {
                 estaturas[i][j] = scanner.nextInt();
             }
         }
-
-       
-        for (int i = 0; i < 4; i++) {
-            int suma = 0, min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-            
-           
-            for (int j = 0; j < 10; j++) {
+     
+        for (int i = 0; i < estaturas.length; i++) {
+            int suma = 0, min = 210, max = 140;
+            for (int j = 0; j < estaturas[i].length; j++) {
                 int estatura = estaturas[i][j];
                 suma += estatura;
                 if (estatura < min) min = estatura;
                 if (estatura > max) max = estatura;
             }
-
-           
-            int media = suma / 10;
-
-           
-            System.out.println(paises[i] + ":");
-            System.out.println("  Media: " + media + " cm");
-            System.out.println("  Mínima: " + min + " cm");
-            System.out.println("  Máxima: " + max + " cm");
-            System.out.println();
+            int media = suma / estaturas[i].length;
+            System.out.println(paises[i] + ": Media = " + media + " cm, Mínima = " + min + " cm, Máxima = " + max + " cm");
         }
-
-        scanner.close(); 
+        scanner.close();
     }
 }
+
+
 
